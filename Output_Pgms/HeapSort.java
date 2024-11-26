@@ -4,10 +4,9 @@ public class HeapSort {
     static Integer[] generateRandomArray(int n) {
         Integer[] arr = new Integer[n];
         Random random = new Random();
-
-        for (int i = 0; i < n; i++) {
-            arr[i] = random.nextInt(100) + (-25) + 1; // Adjust the upper bound as needed
-        }
+	    for (int i = 0; i < n; i++) {
+		    arr[i] = random.nextInt(100) + (-25) + 1; // Adjust the upper bound as needed
+	    }
         return arr;
     }
 
@@ -23,21 +22,19 @@ public class HeapSort {
 
         System.out.print("Enter the number of elements (n): ");
         int n = scanner.nextInt();
-	    Integer[] arr = generateRandomArray(n);
-
-        System.out.println("Original array:");
+	Integer[] arr = generateRandomArray(n);
+	System.out.println("Original array:");
         printArray(arr);
 
         long startTime = System.currentTimeMillis();
 
-        Arrays.sort(arr,Collections.reverseOrder());
+        Arrays.sort(arr,Collections.reverseOrder()); // Sorts in descending order
 
         long endTime = System.currentTimeMillis();
         System.out.println("\nSorted array:");
         printArray(arr);
-
-
-        long totalTime = endTime - startTime;
+	    
+	long totalTime = endTime - startTime;
         System.out.println("\nTotal time taken: " + totalTime + " milliseconds");
         scanner.close();
     }
