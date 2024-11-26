@@ -13,7 +13,6 @@ public class robinkarp{
             System.out.println("Pattern Not Found");
         }
         else{
-            
             System.out.println("SUCCESS!!!  Pattern Found at position:" +(position+1));
         }
     }
